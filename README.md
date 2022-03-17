@@ -6,6 +6,7 @@
  <br>
 <ul>
   <li><a href="https://denizkiskanc.github.io/Teknasyon-Coding-Bootcamp/Starting%20Example/">Starting Example</a></li>
+ </ul>
 <br>
 <b>Used Technologies<b>
   <ul>
