@@ -4,7 +4,7 @@
 <br>
 <b>Demo<b>
  <br>
- [Starting Example](https://denizkiskanc.github.io/Teknasyon-Coding-Bootcamp/Starting%20Example/)
+ [Starting Example] (https://denizkiskanc.github.io/Teknasyon-Coding-Bootcamp/Starting%20Example/)
 <br>
 <b>Used Technologies<b>
   <ul>
