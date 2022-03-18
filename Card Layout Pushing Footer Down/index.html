@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Card Layout Pushing Footer Down</title>
+        <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+
+        min-height: 100vh;
+        background-color: #fff;
+        
+           
+        }
+        .cards {
+
+        display: flex;
+        flex-direction: row;
+
+        }
+        .card {
+        display: flex;
+        flex-direction: column;
+        background-color: aliceblue;
+        margin: 5% 3%;
+        width: 50%;
+        padding:2%;
+}
+
+        .card .content {
+        flex: 1 1 auto;
+        }
+
+        a{
+        text-decoration: none;
+        color:rgb(68, 149, 241);
+        font-weight: 700;
+           
+        }
+        
+        p{
+        color: rgb(167, 167, 167);
+        margin-top: 5%;
+        }
+        img{
+
+        width: 20px;
+        height: 20px;
+        margin-right:10%;
+        }
+
+        footer {
+
+            margin-top: 15%;
+        }
+
+        header h1 {
+
+            color:rgb(20, 22, 87);
+            text-align: center;
+            margin-top: 2%;
+            text-underline-offset: 15px;
+            text-decoration: underline;
+            text-decoration-color: rgb(0, 162, 255);
+            
+        }
+        
+        @media (max-width:768px){
+    
+            .cards {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            }
+
+}
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>GitHub</h1>
+            </header>
+            <div class="cards">
+                <div class="card">
+                    <div class="content">
+                        <a href="https://github.com/Teknasyon-Teknoloji/desk360-ios-sdk">desk360-ios-sdk</a>
+                        <p>Desk360 iOS SDK.</p>
+                    </div>
+                    <footer>                    
+                        <img src="https://teknasyon.com/content/uploads/swift.png" alt="">
+                        <img src="star.png" alt="">
+                        <img src="share.png" alt="">
+                    </footer>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://github.com/Teknasyon-Teknoloji/desk360-android-sdk">desk360-ios-sdk</a>
+                        <p>Desk360 Android SDK. <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis architecto eveniet ea deserunt, reprehenderit amet quis vero commodi placeat, eligendi sed et! Maxime nostrum aut nisi veniam amet cum ratione.</p>
+                          
+                    </div>
+                    <footer>                    
+                        <img src="https://teknasyon.com/content/uploads/kotlin.png" alt="">
+                        <img src="star.png" alt="">
+                        <img src="share.png" alt="">
+                    </footer>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <a href="https://github.com/Teknasyon-Teknoloji/desk360-livechat-android-sdk">desk360-ios-sdk</a>
+                        <p>Desk360 Mobile Chat SDK for Android</p>
+                    </div>
+                    <footer>                    
+                        <img src="https://teknasyon.com/content/uploads/kotlin.png" alt="">
+                        <img src="star.png" alt="">
+                        <img src="share.png" alt="">
+                    </footer>
+                </div>
+            </div>
+                  
+        </main>
+    </body>
+</html>
