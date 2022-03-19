@@ -71,7 +71,6 @@ ul li {
 .main-2{
 	width: 400px;
 	height: 500px;
-	background: red;
 	overflow: hidden;
 	background: url("1.jpg") no-repeat center/ cover;
    /*  filter:saturate(2); blur(5px) - brightness(200%) - contrast(200%) - drop-shadow(8px 8px 10px gray) - grayscale(100%) - hue-rotate(90deg) - invert(100%) - opacity(30%) - saturate(8) - sepia(100%) */
@@ -155,6 +154,10 @@ button:hover{
     .container{
 	display: flex ;
 	flex-direction: column;
+	margin-top: 10%;
+	margin-bottom: 10%;
+
 }
 }
+
   
