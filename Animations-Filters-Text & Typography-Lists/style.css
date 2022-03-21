@@ -10,28 +10,27 @@ body{
     
 }
 
-.container{
+section .container {
 
     display: flex;
     box-shadow: 5px 20px 50px #000;
 }
 
-.title{
-
-    display: flex;
-    
-}
-.main-1 {
+section  .container .main-1 {
 
     background: #eee;
     padding-top: 5%;
 	padding-bottom: 5%;
 	width: 400px;
-	
-
 }
 
-.title .img img{
+section  .container .main-1 .title{
+
+    display: flex;   
+}
+
+
+section  .container .main-1  .title .img img{
 
     width: 30px;
     height: 30px;  
@@ -49,37 +48,37 @@ body{
     }
 }
 
-.title h1 {
+section  .container .main-1  .title h1 {
 
-    margin: 5% 8%;
-    
+    margin: 5% 8%;  
     color: #432352;
 }
 
-.title {
+section  .container .main-1 .title {
 
     align-items: center;  
-    margin-left: 15%;
+	justify-content: center;
+    display:flex;
 }
 
-ul li {
+section  .container .main-1 ul li {
 	/*list-style-image: url('sqpurple.gif');*/
     list-style: square;
 	list-style-position: inside;/*outside*/
 	font-size: 20px;
 	/*list-style-type: circle -square - upper-roman */;
 }
-.main-2{
+section  .container .main-2{
 	width: 400px;
 	height: 500px;
 	overflow: hidden;
 	background: url("1.jpg") no-repeat center / cover;
    /*  filter:saturate(2) (doymuşluk); blur(5px)(bulanıklık) - brightness(200%) (parlaklık)- contrast(200%) - drop-shadow(8px 8px 10px gray) (gölge) - grayscale(100%) - hue-rotate(90deg) - invert(100%) - opacity(30%) - saturate(8) - sepia(100%) */
 }
-#chk{
+section  .container .main-2 #chk{
 	display: none;
 }
-.signup{
+section  .container .main-2 .signup{
 	width:100%;
 	height: 100%;
     
@@ -126,14 +125,14 @@ button{
 button:hover{
 	background: #3a1e47;
 }
-.login{
+section  .container .main-2 .login{
 	height: 460px;
 	background: #eee;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
-.login label{
+section  .container .main-2 .login label{
 	color: #432352;
 	transform: scale(.7);
 	
