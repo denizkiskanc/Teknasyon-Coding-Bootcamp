@@ -1,88 +1,88 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Card Layout Pushing Footer Down</title>
-        <link rel="icon" href="star.png" type="image/icon type">
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans:wght@300&family=Poppins:wght@200&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        body{
-
-        min-height: 100vh;
-        background-color: #fff;
-        
-           
-        }
-        .cards {
-
-        display: flex;
-        flex-direction: row;
-
-        }
-        .card {
-        display: flex;
-        flex-direction: column;
-        background-color: aliceblue;
-        margin: 5% 3%;
-        width: 50%;
-        padding:2%;
+<meta charset="UTF-8">
+<title>Card Layout Pushing Footer Down</title>
+<link rel="icon" href="star.png" type="image/icon type">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans:wght@300&family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
-        .card .content {
-        flex: 1 1 auto;
-        }
+body{
 
-        a{
-        text-decoration: none;
-        color:rgb(68, 149, 241);
-        font-weight: 700;
-           
-        }
-        
-        p{
-        color: rgb(167, 167, 167);
-        margin-top: 5%;
-        
-        }
-        img{
+min-height: 100vh;
+background-color: #fff;
 
-        width: 20px;
-        height: 20px;
-        margin-right:10%;
-        }
-
-        footer {
-
-            margin-top: 15%;
-        }
-
-        header h1 {
-
-            color:rgb(20, 22, 87);
-            text-align: center;
-            margin-top: 2%;
-            text-underline-offset: 15px;
-            text-decoration: underline;
-            text-decoration-color: rgb(0, 162, 255);
-            
-        }
-        
-        @media (max-width:768px){
     
-            .cards {
+}
+section .cards {
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            }
+display: flex;
+flex-direction: row;
+
+}
+section .cards .card {
+display: flex;
+flex-direction: column;
+background-color: aliceblue;
+margin: 5% 3%;
+width: 50%;
+padding:2%;
+}
+
+section .cards .card .content {
+flex: 1 1 auto;
+}
+
+section .cards .card .content a{
+text-decoration: none;
+color:rgb(68, 149, 241);
+font-weight: 700;
+    
+}
+
+section .cards .card .content p{
+color: rgb(167, 167, 167);
+margin-top: 5%;
+
+}
+section .cards .card footer img{
+
+width: 20px;
+height: 20px;
+margin-right:10%;
+}
+
+section .cards .card footer {
+
+    margin-top: 15%;
+}
+
+header h1 {
+
+    color:rgb(20, 22, 87);
+    text-align: center;
+    margin-top: 2%;
+    text-underline-offset: 15px;
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 162, 255);
+    
+}
+
+@media (max-width:768px){
+
+    .cards {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
 
 }
 
@@ -93,6 +93,7 @@
             <header>
                 <h1>GitHub</h1>
             </header>
+            <section>
             <div class="cards">
                 <div class="card">
                     <div class="content">
@@ -132,7 +133,7 @@
                     </footer>
                 </div>
             </div>
-                  
+        </section>       
         </main>
     </body>
 </html>
