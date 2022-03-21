@@ -24,7 +24,7 @@
 }
 
 body{
-    min-height: 100vh;
+    height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
@@ -60,7 +60,7 @@ body.dark{
 }
 
 
-.sidebar li{
+.sidebar  li {
     height: 50px;
     list-style: none;
     display: flex;
@@ -112,13 +112,13 @@ body.dark{
     display: flex;
     flex-direction: column;
 }
-header .image-text .name {
+.sidebar header .image-text .name {
     margin-top: 2px;
     font-size: 18px;
     font-weight: 600;
 }
 
-header .image-text .profession{
+.sidebar header .image-text .profession{
     font-size: 16px;
     margin-top: -2px;
     display: block;
