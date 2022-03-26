@@ -19,7 +19,7 @@
   <br>
  [Bootstrap Example](https://denizkiskanc.github.io/Teknasyon-Coding-Bootcamp/Bootstrap%20Example/)
    <br>
- [SASS-2](https://denizkiskanc.github.io/Teknasyon-Coding-Bootcamp/Sass-2/)
+ [SASS-2]
  
  
 <br>
