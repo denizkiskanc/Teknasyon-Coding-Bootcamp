@@ -148,7 +148,7 @@ section  .container .main-2 .login label{
 	transform: scale(.7); /* küçülüyor*/
 }
 
-@media (max-width:768px){
+@media (max-width:997px){
     .container{
 	display: flex ;
 	flex-direction: column;
