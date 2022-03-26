@@ -24,6 +24,8 @@
         min-height: 70vh;      
     }
 
+   
+
     section a:hover{
 
         text-decoration: none;      
@@ -61,6 +63,11 @@
         .btn {
          
           width: 20%;
+        }
+
+        #home .h2{
+
+            padding-top: 10%;
         }
 
       }
