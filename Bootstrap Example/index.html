@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel = "icon" href = "img/title.png" type = "image/x-icon">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
     <body>
@@ -62,11 +63,11 @@
                   </nav>
             </header>
             <section id="home" class="d-flex flex-column justify-content-center align-items-center">            
-                    <h2 class="h2 text-center" style="font-size:45px; color:#07336b">The best electronic store in New York</h2>
+                    <h2 class="h2 text-center" style="font-size:45px; color:#07336b" data-aos="fade-up">The best electronic store in New York</h2>
                     <div class="d-flex justify-content-center align-items-center">
-                        <a href="#" class="mx-2 text-dark font-weight-bold">Home</a>
-                        <a href="" class="mx-2 text-dark font-weight-bold">/</a>
-                        <a href="#" class="mx-2 text-dark font-weight-bold">Shop</a>
+                        <a href="#" class="mx-2 text-dark font-weight-bold" data-aos="fade-up">Home</a>
+                        <a href="" class="mx-2 text-dark font-weight-bold" data-aos="fade-up">/</a>
+                        <a href="#" class="mx-2 text-dark font-weight-bold" data-aos="fade-up">Shop</a>
                    </div>
             </section>
             <section id="content" class="mx-auto mt-5 ">
@@ -83,7 +84,7 @@
             </div>
             </section>
 
-            <section  id="product" class="mt-5">
+            <section  id="product" class="mt-5"   data-aos="fade-up">
 
                 <div class="container">
                     <div class="row">
@@ -228,7 +229,7 @@
                     </div>
                 </div>
 
-                <nav aria-label="Page navigation example ">
+                <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center mt-5 ">
                         <li class="page-item">
                         <a class="page-link border-0" href="#" tabindex="-1"><img src="img/left.png" alt="" width="15" height="15"></a>
@@ -245,7 +246,7 @@
 
             </section>
             
-                <section id="email" class="d-flex flex-column justify-content-center align-items-center">    
+                <section id="email" class="d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">    
                      
                    <p class="h5 font-weight-bold text-center" style="color:#07336b">Do you want to receive the newest trends and special offers?<br>Sign up now and get 10% off your order.</p>   
                    <p class="font-weight-bold text-center my-5">We'll keep you up to date with our latest products, discounts, insights, free resources and much more. </p>
@@ -368,6 +369,16 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    AOS.init({
+
+    offset:400,
+    duration:1000
+    });
+  </script>
+  
 </main> 
 </body>
 </html>

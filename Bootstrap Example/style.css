@@ -36,12 +36,14 @@
         background:url(img/bg.jpg) no-repeat;
         background-size: cover;
         background-position: bottom;
-        min-height: 55vh;      
+        min-height: 55vh;    
+        margin-top: 100px;  
     }
 
     #footer {
         background-color: #F8F9FA;
         color:#68A2ED;
+        margin-top: 150px;
     }
 
     #footer .container .row .col-md-3  p{
