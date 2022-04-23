@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    
+</head>
+<body>
+    <p id="demo"></p>
+    
+    <script>
+    
+    //FOR DÖNGÜSÜ
+
+    /*
+    var sayi  = prompt("1 ile 50 arası bir sayı giriniz: ", "");
+    for (var i = sayi; i < 100; i++) {
+        document.write(i + "<br>");
+}
+    */
+
+    
+    //WHİLE DÖNGÜSÜ
+    /*
+    var sayi = prompt("sayı giriniz","");
+    i=0 
+    while(i<sayi){
+    i++;
+        if(i%2==0)
+        document.write(i + "<br>");
+        
+    
+    }
+
+    */
+
+    //DO WHİLE DÖNGÜSÜ
+    /*  
+        let result = '';
+        let i = 0;
+
+        do {
+        i = i + 1;
+        result = result + i;
+        } while (i < 5);
+
+        document.getElementById("demo").innerHTML = result;
+    */
+
+    //FOR IN DÖNGÜSÜ
+    /*
+        const cars = ["Renault", "Skoda", "Citroen", "Toyota"];
+        let text = "";
+        for (let x in cars) {
+        if(x<3)
+        text += cars[x] + "---";
+        else
+        text += cars[x] + " ";
+        }       
+        document.getElementById("demo").innerHTML = text;     
+    */
+
+    //OPERATORS
+    /*   
+        var x=10;
+        var y=20;
+        var z=30;
+        var yuzde;
+
+        toplama=x+y+z;
+        cikarma=z-x;
+        carpma=y*z*2;
+        bolme=y/x;
+        yuzde=z%x;
+
+        document.getElementById("demo").innerHTML = toplama; 
+        document.getElementById("demo").innerHTML = cikarma; 
+        document.getElementById("demo").innerHTML = carpma; 
+        document.getElementById("demo").innerHTML = bolme; 
+        document.getElementById("demo").innerHTML = yuzde; 
+
+        let text1 = "Deniz";
+        let text2 = "Kıskanç";
+        let text3 = text1 + " " + text2;
+        document.getElementById("demo").innerHTML = text3; 
+
+        var i;
+
+        for(i=0; i<=1000; i++) {
+
+            if(i%2==1 && i<100)
+            document.write(i + "<br>");
+        }
+    */
+
+    //METHODS
+
+    //SOME: some(), dizideki en az bir öğenin sağlanan işlev tarafından uygulanan testi geçip geçmediğini test eder. Dizide, kendisi için sağlanan işlevin true değerini döndürdüğü bir öğe bulursa true değerini döndürür; aksi halde false döndürür. Diziyi değiştirmez.
+
+    const besin_katlari = [5, 2, 18, 3];
+    document.getElementById("demo").innerHTML = besin_katlari.some(checkAdult);
+
+    function checkAdult(besin_katlari) {
+    return besin_katlari % 5 ==0;
+    }
+
+    //FIND: find(), sağlanan dizideki sağlanan test işlevini karşılayan ilk öğeyi döndürür. Test işlevini karşılayan hiçbir değer yoksa undefined döndürülür.
+    
+    const find_dizi = [5, 12, 8, 130, 44];
+    const found = find_dizi.find(element => element > 15);
+    console.log(found);
+    document.write(found);
+    
+    //INCLUDES:includes(), bir dizinin girdileri arasında belirli bir değer içerip içermediğini, dönen true veya false uygun şekilde belirler.
+
+    
+    const pets = ['cat', 'dog', 'fish'];
+
+    console.log(pets.includes('cat'));//true
+    console.log(pets.includes('rabbit'));//false
+    
+    //INDEX: belirli bir öğenin dizide bulunabileceği ilk indisini veya mevcut değilse -1'i döndürür.
+
+    const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+    console.log(beasts.indexOf('bison'));// 1 döndürür
+    console.log(beasts.indexOf('giraffe'));// -1 döndürür.
+    
+    // MAP: map(), çağıran dizideki her öğe üzerinde sağlanan bir işlevi çağırmanın sonuçlarıyla doldurulmuş yeni bir dizi oluşturur .
+   
+    const string_dizi = ["1", "4", "9", "16"];
+    const map1 = string_dizi.map(x => x + 2);
+    console.log(map1);
+    
+    //FOR EACH:
+    let sum = 0;
+    const numbers1 = [5, 10, 15, 20];
+    numbers1.forEach(myFunction);
+
+    document.getElementById("demo").innerHTML = sum;
+
+    function myFunction(item) {
+    sum += item;
+    }
+
+    //FOR İN: bir Nesnenin özellikleri arasında dolaşır
+
+    const numbers2 = [45, 4, 9, 16, 25];
+
+    let txt = "";
+    for (let x in numbers2) {
+        txt += numbers2[x] + "<br>"; 
+    }
+    document.getElementById("demo").innerHTML = txt;
+
+    //FOR OF
+    let language = "JavaScript";
+
+    let text = "";
+    for (let x of language) {
+    text += x + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = text;
+    
+    //EN ÇOK KULLANILAN 10 ARRAY METHODU
+
+    //Array.isArray():  metodu değerin Array olup olmadığını kontrol eder. Eğer array ise ‘true’ değilse ‘false’ döner.
+
+    let text1 = "Deniz";
+    let result1 =  Array.isArray(text1);
+
+    document.getElementById("demo").innerHTML = result1;
+    console.log(result1);//false
+
+    let text2 = ["Deniz","Kıskanç"];
+    let result2 =  Array.isArray(text2);
+
+    document.getElementById("demo").innerHTML = result2;
+    console.log(result2);//true
+
+
+    //Array.prototype.concat():concat() metodu eklendiği dizi ile parametre olarak aldığı dizi(leri) birleştirerek yeni bir dizi döndürür.
+
+    var num1 = [1, 2, 3];
+    var num2 = [4, 5, 6];
+    var num3 = [7, 8, 9];
+
+    var nums = num1.concat(num2, num3);
+
+    console.log(nums); // Result: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    
+    //Array.prototype.filter(): filter() metotu sağlanan işlev tarafından uygulanan testi geçen tüm öğelerle birlikte yeni bir dizi oluşturur.
+    
+    const words = ['mehmet', 'aylin', 'aslı', 'yasemin', 'naz'];
+
+    const result = words.filter(word => word.length > 5);
+
+    console.log(result);
+
+    //Array.prototype.join(): join() metodu bir array içerisinde yer alan bütün elemanları birleştirerek string bir ifade olarak geri döndürür. (veya array benzeri bir obje olarak) Elemanlar varsayılan olarak virgül ile ayıracı ile ayrılır. İsteğe bağlı olarak elementleri birbirinden ayırmak için farklı ayıraçlar da kullanılabilir.
+    
+    const elements = ['Mustafa', 'Kemal', 'Atatürk'];
+
+    console.log(elements.join());
+    console.log(elements.join(''));
+    console.log(elements.join('*'));
+
+    //Array.prototype.reverse(): reverse() metodu dizi elemanlarını tersten sıralar . Dizinin ilk elemanı son eleman olur, son elemanı ilk eleman olur.
+    
+    const dizi = ['one', 'two', 'three'];
+    console.log('array1:', dizi);
+
+    const reversed = dizi.reverse();
+    console.log('reversed:', reversed);
+
+    //Array.prototype.splice(): bir Dizi'nin içeriklerini, yeni öğeler ekleyerek ve/veya mevcut öğeleri silerek değiştirir.
+
+    const months = ['Jan', 'March', 'April', 'June'];
+    months.splice(4, 1, 'May');
+    console.log(months); //Array ["Jan", "Feb", "March", "April", "May"]
+
+    
+    //Array.prototype.unshift(): unshift() yöntemin başına bir veya daha fazla element ekleri ve yeni sınıftan boyutu geri gelir.
+    
+    const array1 = [1, 2, 3];
+    console.log(array1.unshift(4, 5));
+    console.log(array1);
+
+    //EVERY():Bu metod dizimizde bulunan elemanların tamamı belirlediğimiz kurala uyuyorsa true, herhangi birisi uymuyorsa false değeri döner.
+
+    const array2 = [1, 2, 3, 4, 5, 6];
+
+  
+    const dorttenBuyuk = array2.every(num => num > 4);
+    console.log(dorttenBuyuk);
+
+    const ondanKucuk = array2.every(num => num < 10);
+    console.log(ondanKucuk); 
+
+
+    //Array.from(): Bu metod dizi oluşturmamıza yardımcı olur özellikle DOM üzerinde çalışıyorken oldukça işimize yarayabilir.
+    const liste = document.querySelectorAll('a','b','c');
+    const listeArray = Array.from(document.querySelectorAll('a','b','c'));
+
+    // Dizi olup olmadıklarını kontrol edelim
+    console.log(Array.isArray(liste)); // output: false
+    console.log(Array.isArray(listeArray));  // output: true
+
+           //querySelectorAll ile DOM üzerinde bulunan ‘li’ elemanlarını seçtik ancak seçtiklerimiz bir dizi değil eğer bunları dizi olarak istiyorsak Array.from kullanmamız gerekir.
+    
+    //Array.of(): Bu metod ile yeni bir dizi oluşturabilirsiniz. Eğer Array() metoduyla ne farkı olduğunu düşünüyorsanız farkı şudur; Array() metoduna tek bir parametre gönderirseniz ve bu bir sayı ise dizi oluşturulmaz gönderdiğiniz sayı boyutunda elemanları boş bir dizi oluşturulur ancak Array.of() metoduna tek bir parametre ve sayı bile gönderseniz, o elemanın bulunduğu bir dizi oluşturur. 
+    console.log(Array.of(1, 2, 3)); // [1, 2, 3]        
+    console.log(Array(1, 2, 3));    // [1, 2, 3]
+    console.log(Array.of(5)); // [5] 
+    console.log(Array(5)); // [ , , , , ]
+
+
+    //SORULAR
+
+    //1.SORU
+
+    var sayi=60;
+    document.write("<br> BİRİNCİ SORU:");
+    document.write("[");
+    for(i=1;i<=sayi;i++){
+        
+        if(i%3==0 && i%5!=0)
+        document.write("' Fizz ', ");
+
+        else if(i%5==0 && i%3!=0)
+        document.write("' Buzz ', ");
+
+        else if(i%5==0 && i%3==0)
+        document.write("' FizzBuzz ', ");
+
+        else
+        document.write(i +", ");
+
+        
+    }
+    document.write("]");
+    document.write("<br>");
+    
+    //2.SORU
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>       
+    
+
+    
+</body>
+</html>
