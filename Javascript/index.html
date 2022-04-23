@@ -285,6 +285,24 @@
     document.write("<br>");
     
     //2.SORU
+    document.write("<br> İKİNCİ SORU:");
+    const numbers = ([1, 2, [3, 4, 5], 6, [7, 8], 9]);
+    const flatNumbers = numbers.flat();
+
+    document.write("["+ flatNumbers +"]");
+
+    //3.SORU
+    document.write("<br> ÜÇÜNCÜ SORU:");
+    function reverse (word) {
+    word = word.split(' ').reverse().join(' ')
+    return word
+
+}
+    word = "May the Fourth be with you"
+    console.log(reverse(word))
+    document.write(reverse(word))
+   
+
 
 
     
