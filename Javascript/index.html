@@ -9,8 +9,80 @@
 </head>
 <body>
     <p id="demo"></p>
-    
+  
     <script>
+
+    /*İstemci web sunucusuna http protokolüyle internet üzerinden bir istekte bulunur.Js kodları sunucuda dosyanın 
+    içine gömüp internet üzerinden istemciye gönderilir ve istemcide  çalıştırıp gösterir. Js normalde client side'da kullanılır 
+    ama bazı frameworkler  örneğin;node.js server side da kullanılıyor. 
+
+
+    -----VERİ TİPLERİ-----
+
+    Js de değişkenleri tanımlarken genelde herhangi bir veri tipi tanımlaması yapmaya gerek duymayız.Sebebi ise js de otomatik veri 
+    tipi tanımlaması yapıldığındandır.
+
+    Veri tipleri --> String,Number,boolean,Array,nesne,Integer.
+    
+
+    -----DEĞİŞKENLER------
+
+    Değer atamadan sadece değişken oluşturma işlemine variable declaration denilmektedir.
+    
+    Örn: var deniz;
+         Console.log(deniz) -->Undefined
+    
+    Bir değişkene ilk değeri atama işlemine variable intialization denmektedir.
+
+    Örn: deniz = "10"
+         Console.log(deniz) -->10
+
+    -------SCOPE-------
+
+    Değişkenlerin ve fonksiyonların nerelerde erişebilir,nerelerde erişelemez olduklarını belirler.
+    
+    Global Scope--> Fonksiyon içerisinden erişebilir değişkenler
+
+    Örn: var deniz = "hello";//Global scope
+         Function greet() {
+
+            console.log(deniz);
+         }
+
+         greet();-->hello
+
+    Function Scope-->Eğer var ile tanımlanan bir değişken fonksiyonun içinde tanımlanmış ise o değişken local(Function) Scope'a sahiptir.
+                     Bundan dolayı aynı isimli değişkeni farklı scopelarda yani fonksiyonlarda tanımlayabiliriz.
+
+    Örn: 
+          Function deniz() {
+
+            var albumDate = new Date();
+            return albumDate;
+          }
+
+          deniz();
+
+    Lexical Scope--> İç içe fonksiyonlar var.İçteki fonksiyon dışındaki fonksiyonun değişkenine erişebilir.
+
+
+    VAR---LET---CONST
+
+    ---VAR---
+    keyword’ü ile değişkenler tekrar tanımlanabilir ve değerleri güncellenebilir.
+    Function scope özelliği taşır.
+
+    ---LET---
+    let ile tanımlanan bir değişkeni tekrar tanımlayamayız ancak değerini güncelleyebiliriz.
+    Block scope özelliği taşır.Yani let ile oluşturulanbir değişken sadece oluşturulduğu yerdeki süslü parantezler içerisinde erişebilir.
+    
+    ---CONST---   
+    const ile oluşturulan bir değişkene daha sonrasında tekrar değer ataması yapılamaz.
+    
+         
+ 
+
+     */
     
     //FOR DÖNGÜSÜ
 
