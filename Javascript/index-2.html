@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+       //Object.entries():Object tipinde bir elemanı parametre olarak alan ve geriye bu object tipindeki eleman içerisinde yer alan [key value] çiftlerini array olarak döndüren methodtur. 
+   
+       const users = {
+           Deniz:22,
+           Melisa:25,
+           Pınar:26
+       };
+
+       console.log(Object.entries(users));
+       
+       for (let [key,value] of  Object.entries(users)){
+
+        console.log(`${key} had ${value} users`); 
+       }
+       
+       //Object.values():Object tipinde bir elemanı parametre olarak alan ve geriye bu object tipindeki eleman içerisinde yer alan value(değerleri) array olarak döndüren methodtur.
+
+       const clothes = {
+         
+        dress:250,
+        shoes:200,
+        sweatshirt:150      
+       };
+
+       console.log(Object.values(clothes));//[250, 200, 150]
+
+       function sumClothes(clothes) {
+
+        let sum=0;
+        for(let cloth of Object.values(clothes)){
+
+            sum +=cloth;
+        }
+
+        return sum;
+       }
+       console.log(sumClothes(clothes));//600
+
+       //Object.keys( ):Object tipinde bir elemanı parametre olarak alan ve geriye bu object tipindeki eleman içerisinde yer alan propertyleri(özellikleri) array olarak döndüren methodtur.
+       
+       const productId = {
+           A:587,
+           B:259,
+           C:763
+       };
+
+       console.log(Object.keys(productId)); //['A', 'B', 'C']
+      
+
+       //Object.assign():Object.assign metodu, nesnelerin birbirleri üzerine kopyalanmasını sağlar. 
+   
+        const personelName = {name: "Deniz"};
+        const personelSurname = {surname: "Kıskanç"};
+        const personelAge = {age: 21};
+        const personel = Object.assign(personelName, personelSurname,personelAge);
+        console.log(personel);
+        
+        //Eklediğimiz nesnelerden bazılarının içerisinde aynı isimde özellik varsa her zaman en son nesnenin değeri alınacaktır.
+        const Name = {name: "Pınar"};
+        const Surname = {surname: "Kıskanç"};
+        const Age = {age: 21};
+        const Age2 = {age: 22};
+        const personel2 = Object.assign(Name, Surname,Age,Age2);
+        console.log(personel2);
+        const personel3 = Object.assign(Name, Surname,Age2,Age);
+        console.log(personel3);
+
+        //Neden nesneleri eşitlemek yerine object.assign kullanıyoruz?
+
+
+        const personel4 = {name: "Deniz", surname: "Kıskanç"};
+        const personel5 = personel4;
+        personel4.name = "Pınar";
+        console.log(personel4);//{name: "Pınar", surname: "Kıskanç"}
+        console.log(personel5);//{name: "Pınar", surname: "Kıskanç"}
+
+        //neden personelin name özelliği de değişti?Çünkü Js de array ve object tipleri 
+        //referasntır.Bundan dolayı bu değişkenler,bilgilerin bellekteki adreslerini tutarlar.
+        //Dolayısıyla aynı adresi gösteren nesnelerden birinin değeri güncellendiğinde diğer 
+        //nesnenin değeri de güncellenecektir.
+
+        const personel6 = {name: "Deniz", surname: "Kıskanç"};
+        const personel7= Object.assign({}, personel6);
+        personel7.name = "Pınar";
+        console.log(personel6);
+        console.log(personel7);
+
+        //Fakat iç içe nesneler olduğunda Object.assign metodu çalışmayacaktır.
+
+        const a = {address: {city: "Ankara", country: "Turkey"}};
+        const b = Object.assign({}, personel);
+        b.address.city = "Samsun";
+        console.log(a);//{ address: { city: ‘Samsun’, country: ‘Turkey’ } }
+        console.log(b);//{ address: { city: ‘Samsun’, country: ‘Turkey’ } }
+
+        //İç içe nesneler aşağıdaki gibi kopyalanır.
+
+        const c = {address: {city: "Ankara", country: "Turkey"}};
+        const d = JSON.parse(JSON.stringify(personel));
+        d.address.city = "Samsun";
+        console.log(c);//{ address: { city: ‘Ankara’, country: ‘Turkey’ } }
+        console.log(d);//{ address: { city: ‘Samsun’, country: ‘Turkey’ } }
+        
+        //Object.freeze(): ile bir nesneyi dondurarak tamamen değişmez yapabilirsiniz. Yeni özellikler ekleyemez, güncelleyemez ve silemezsiniz. Nesnenin içerisinde bulunan diğer nesneler yine değişikliğe uğrayabilir yani derinliğe sahip nesnelerde değişmezlik sağlanmaz.
+     
+        const obj = {
+        prop: 42
+        };
+        Object.freeze(obj);
+
+        obj.prop = 33;
+
+        console.log(obj.prop);//42
+
+        //Object.fromEntries():Entries üzerinden nesne klonu oluşturmak için kullanılır.Dataları nesneye çeviriypr.
+        
+
+        const me={ name:"Onur", age:39, height:180}
+        const entries=Object.entries(me);
+        console.log(entries); //[{"name":"Onur"},...]
+        const meClone=Object.fromEntries(entries)
+        console.log(meClone)
+
+        //Object.prototype.hasOwnProperty(), nesnenin belirtilen özelliğe kendi özelliği olarak sahip olup olmadığını (miras) belirten bir boole döndürür.
+
+        const object1 = {};
+        object1.property1 = 42;
+
+        console.log(object1.hasOwnProperty('property1'));
+        // expected output: true
+
+        console.log(object1.hasOwnProperty('toString'));
+        // expected output: false
+
+        console.log(object1.hasOwnProperty('hasOwnProperty'));
+        // expected output: false
+
+
+        let fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
+        fruits.hasOwnProperty(3);   // true ('Orange')
+        fruits.hasOwnProperty(4);   // false - not defined
+
+
+        //CLASS
+
+        //Javascript dilinde sınıflar class ön ekiyle tanımlanır.
+        
+        class Araba {
+            constructor(ad, model) {
+                this.ad = ad;
+                this.model = model;
+  }
+}      
+        //Araba adında bir sınıf oluşturur.
+        //Ad ve model adında iki adet başlangıç özelliğine sahiptir.
+        //Javascript sınıflraı bir nesne değildir. Nesne tanımlamak için sınıf oluşturulur.
+   
+        let araba = new Araba("Bmv","e220D");
+        console.log(araba.ad);
+        console.log(araba.model);
+        
+        //CONSTRUCTOR METHODU
+
+        //Yeni bir nesne oluşturulduğunda eğer sınıfın içerisinde constructor metodu varsa otomatik olarak çalışır.
+        //Nesne özelliklerini başlatmak için kullanılırlar.
+        //Eğer bir constructor tanımlamazsanız Javascript otomatik olarak boş bir constructor çalıştırır.
+
+        //Constructor  FUnction
+
+  
+
+        //Sınıf Methodları
+
+        //her sınıf bir işlemi temsil etmeli ve her metotta sadece bir işlemi yapmalıdır. 
+
+        /*
+        class Sinif {
+            constructor() { ... }
+            metot_1() { ... }
+            metot_2() { ... }
+            metot_3() { ... }
+        }
+        */
+
+        class Sirket{
+            constructor(personel_sayisi){
+                this.personel_sayisi=personel_sayisi;//başlangıç özelliği
+            }
+            giderHesapla(maas,faturalar,ofis_kirasi){ 
+                let toplamMaas = this.personel_sayisi*maas;
+                return toplamMaas+faturalar+ofis_kirasi;
+            }
+        }
+
+
+        let kodlamaklazim = new Sirket(5);
+        let gider = kodlamaklazim.giderHesapla(4000,1000,4500);
+        console.log("Bir aylık toplam gider: "+gider+" TL");
+
+
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+                
+            }
+            }
+
+            const myCar = new Car("Ford", 2014);
+            document.getElementById("demo").innerHTML =myCar.name + " " + myCar.year;
+
+
+    //CLASSLARDA HOİSTİNG :sınıfların oluşturulmadan önce tanımlanması gerekir.
+
+    const p = new Rectangle(); // ReferenceError
+
+    class Rectangle {}
+    
+    //Sınıf ifadeleri adlandırılabilir veya adlandırılmamış olabilir. Adlandırılmış bir sınıf ifadesine verilen ad, sınıfın gövdesi için yereldir.
+    
+    
+     
+    
+    //Bir constructor, süper sınıfın constructor 'nu çağırmak için super sözcüğünü kullanabilir.
+   </script> 
+</body>
+</html>
