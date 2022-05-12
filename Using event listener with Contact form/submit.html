@@ -36,6 +36,25 @@
       font-size: 25px;
       color: rgb(127, 122, 122);
    }
+
+   body section .submit-button-wrapper {
+    text-align: center;
+  }
+  
+  body section .submit-button-wrapper input {
+    border: none;
+    border-radius: 4px;
+    background-color: #d787ef;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  
+  body section .submit-button-wrapper input:hover {
+    background-color: #c93ff3;
+  }
   
 </style>
 <body>
@@ -43,7 +62,17 @@
         <img src="img/check-mark.png" alt="">
         <h1>Success!</h1>
         <p>Your message has been sent.</p>
+        <div class="submit-button-wrapper">
+            <input id="button" type="submit" value="Click to return to the contact page">
+        </div>
     </section>
-    
+    <script>
+
+        //onclick
+        document.getElementById("button")
+        .onclick = function(){
+            window.setTimeout(function(){location.href = 'index.html';});                        
+            };  
+    </script>
 </body>
 </html>
