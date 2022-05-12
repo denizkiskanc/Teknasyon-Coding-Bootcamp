@@ -1,7 +1,4 @@
 
-
-
-
 //mouseenter - mouseleave
 document.getElementById("description").addEventListener("mouseenter", mouseEnter);
 document.getElementById("description").addEventListener("mouseleave", mouseLeave);
