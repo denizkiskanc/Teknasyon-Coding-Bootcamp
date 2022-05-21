@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Reverse Integer</title>
+<style>
+.main .section .container .card {
+    position: relative;
+  }
+  .card__print-count {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .output {
+    margin-top: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body class="bg-dark">
+    <main>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mx-auto">
+              <div class="card bg-light mt-5 p-3" id="game">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Reserve Integer</h5>
+                  <p class="card-text text-center">Sayı giriniz</p>
+                  <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" id="num" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
+                  </div>
+                  <div class="d-grid">
+                  <button onclick="reversedNum()"  class="btn btn-primary " type="submit">Sayıyı ters çevir</button>
+                  </div>
+                  <div class="output" id="output"></div> 
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </main>  
+    <script>
+       
+        const output=document.querySelector("#output");
+        var value;
+        function reversedNum() {        
+        value = document.querySelector("#num").value;
+        value = Number(value);//string den number a dönüştürme
+        // value = num;
+     
+            value = parseFloat(
+            value
+                .toString()
+                .split('')
+                .reverse()
+                .join('')
+            ) * Math.sign(value)
+
+        print(value);
+       
+        }
+
+        function print(value) {
+
+         output.innerHTML=value; 
+
+        }    
+    </script> 
+  </body>
+  </html>
