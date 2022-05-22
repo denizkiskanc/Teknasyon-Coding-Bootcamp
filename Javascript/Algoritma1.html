@@ -54,15 +54,13 @@
         var value;
         function reversedNum() {        
         value = document.querySelector("#num").value;
-        value = Number(value);//string den number a dönüştürme
-        // value = num;
-     
+
             value = parseFloat(
             value
-                .toString()
-                .split('')
-                .reverse()
-                .join('')
+                .toString()//stringe dönüştürüyor
+                .split('')//girilen sayıyı dizi içerisinde bölüyor
+                .reverse()//ters çeviriyor
+                .join('')//tersine çevrilmiş karakterleri yeniden birleştiriyor
             ) * Math.sign(value)
 
         print(value);
